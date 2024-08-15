@@ -339,6 +339,7 @@ header, section, footer, #footer-bottom{
   position: relative;
   animation: hideAnimation 0s ease-in 2.5s;
   animation-fill-mode: forwards;
+  z-index: 10000;
 }
 @keyframes hideAnimation {
   to {
@@ -681,4 +682,44 @@ footer{
       margin-top: 25vh;
       max-width: 100%;
   }
+}
+
+.conatiner-cards {
+	width: 100%;
+	height: max-content;
+  padding-bottom: 10vh;
+}
+.wrap-cards {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+.box-cards {
+	margin: 5vh;
+	width: 400px;
+	height: 300px;
+	text-align: center;
+	border-radius: 1.3rem;
+	-webkit-transition: 200ms ease-in-out;
+	-o-transition: 200ms ease-in-out;
+	transition: 200ms ease-in-out;
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.box-cards:hover {
+	margin-bottom: -1vh;
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.7);
+	box-shadow: 0 0 5px rgba(0,0,0,0.7);
 }
