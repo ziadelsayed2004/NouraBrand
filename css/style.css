@@ -591,8 +591,7 @@ footer{
   width: 50%;
   box-sizing: border-box;
   padding: 20px;
-  margin-top: -30vh;
-}
+  }
 
 .container-colored .details button {
   background: #000;
