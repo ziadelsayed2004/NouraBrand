@@ -576,7 +576,7 @@ footer{
   width: 100%;
   height: 80vh;
   background: #ffffff00;
-  padding-top: 20vh;
+  padding-top: 0vh;
 }
 
 .container-colored .imgBx img {
@@ -678,6 +678,10 @@ footer{
   }
   .container-colored .details p {
       margin-left: 0;
+      margin-top: 25vh;
       max-width: 100%;
+  }
+  .coloredspan{
+    
   }
 }
