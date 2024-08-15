@@ -282,6 +282,11 @@ h6{
   color: #fff;
   background-color: var(--primary-color);
 }
+@media (max-width: 767px) {
+  .che-img{
+    margin-top: 28vh !important;
+  }
+}
 
 
 /* Animation */
