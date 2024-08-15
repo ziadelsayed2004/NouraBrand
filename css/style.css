@@ -658,6 +658,7 @@ footer{
 @media (max-width: 1080px) {
   .container-colored {
       height: auto;
+      margin-top: -30vh;
   }
   .container-colored .imgBx {
       padding: 40px;
@@ -680,8 +681,5 @@ footer{
       margin-left: 0;
       margin-top: 25vh;
       max-width: 100%;
-  }
-  .coloredspan{
-    
   }
 }
