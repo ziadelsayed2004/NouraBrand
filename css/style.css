@@ -739,6 +739,7 @@ footer{
   }
   .box-cards:hover {
     width: 400px;
+    margin: 5vh;  
     height: 240px;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.7);
     box-shadow: 0 0 5px rgba(0,0,0,0.7);
