@@ -725,6 +725,16 @@ footer{
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.7);
 	box-shadow: 0 0 5px rgba(0,0,0,0.7);
 }
+.order-btn{
+  background-color: #C4AEDC;
+  border-radius: 1.3rem;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #00000050;
+  margin-top: 1vh;
+  padding: 1vh;
+  font-weight: 600;
+}
 
 @media (max-width: 1080px) {
   .box-cards {
