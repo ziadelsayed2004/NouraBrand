@@ -43,32 +43,32 @@
   .lateh{
     background: #D0BDB5;
   }
+  .pinkMatt{
+    background: #E85D96;
+  }
 
 /* Summer P2*/
 
   .dp2-1{
-    background: #C48392;
-  }
-  .dp2-2{
-    background: #E85D96;
-  }
-  .dp2-3{
     background: #9E392F;
   }
-  .dp2-4{
+  .dp2-2{
     background: #BD8CA1;
   }
-  .dp2-5{
+  .dp2-3{
     background: #A88176;
   }
-  .dp2-6{
+  .dp2-4{
     background: #0B090C;
   }
-  .dp2-7{
+  .dp2-5{
     background: #662443;
   }
-  .dp2-8{
+  .dp2-6{
     background: #02284C;
+  }
+  .dp2-7{
+    background: #C48392;
   }
 
 /* Summer P3*/
