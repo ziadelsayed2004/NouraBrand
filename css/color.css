@@ -157,4 +157,11 @@
   }
 
 
-  
+  /* Other */
+  .other-item{
+    justify-content: center;
+    display: inline-flex !important;
+    background-color: #b890b8;
+    color: white;
+    font-weight: 700;
+  }
