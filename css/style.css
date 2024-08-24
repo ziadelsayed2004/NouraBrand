@@ -668,7 +668,7 @@ footer{
   padding: 20px;
   }
 
-.container-colored .details button {
+.container-colored .details button ,.orderBtn {
   background: #000;
   color: #fff;
   border: none;
@@ -694,7 +694,7 @@ footer{
   cursor: pointer;
   display: inline-block;
 }
-.product-colors .active:after{
+.product-colors .active-item:after{
   content: "";
   width: 36px;
   height: 36px;

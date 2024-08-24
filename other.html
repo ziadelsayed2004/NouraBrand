@@ -143,13 +143,14 @@
             <div class="details">
                 <div class="content">
                     <p class="product-colors" style="font-weight: 500;">المنتجات المتاحة :&ensp;&ensp; <br>   
-                        <span class="other-item active" data-color-primary="#b890b8" data-color-sec="#b890b8" data-pic="images/other/1st.png"> 1 </span>
-                        <span class="other-item" data-color-primary="#b890b8" data-color-sec="#b890b8" data-pic="images/other/2nd.png"> 2 </span>
-                        <span class="other-item" data-color-primary="#b890b8" data-color-sec="#b890b8" data-pic="images/other/3th.png"> 3 </span>
-                        <span class="other-item" data-color-primary="#b890b8" data-color-sec="#b890b8" data-pic="images/other/4th.png"> 4 </span>
-                        <span class="other-item" data-color-primary="#b890b8" data-color-sec="#b890b8" data-pic="images/other/5th.png"> 5 </span>
+                        <span id="other - (1)" class="other-item active-item" data-color-primary="#b890b8" data-color-sec="#b890b8" data-pic="images/other/1st.png"> 1 </span>
+                        <span id="other - (2)" class="other-item" data-color-primary="#b890b8" data-color-sec="#b890b8" data-pic="images/other/2nd.png"> 2 </span>
+                        <span id="other - (3)" class="other-item" data-color-primary="#b890b8" data-color-sec="#b890b8" data-pic="images/other/3th.png"> 3 </span>
+                        <span id="other - (4)" class="other-item" data-color-primary="#b890b8" data-color-sec="#b890b8" data-pic="images/other/4th.png"> 4 </span>
+                        <span id="other - (5)" class="other-item" data-color-primary="#b890b8" data-color-sec="#b890b8" data-pic="images/other/5th.png"> 5 </span>
                     </p>
-                    <button style="background-color: #b890b8">اطلب الان</button>
+                    <button onclick="location.href=url" style="background-color: #b890b8">اطلب الان</button>
+                  
                 </div>
             </div>
         </div>
@@ -272,12 +273,25 @@
       </div>
 
     <div>
+          <script type="text/javascript">
+
+            var id = document.querySelector('.active-item').id;
+            var url = "https://wa.me/201142397025?text=Noura+Brand+Store+||+Product+id+[+"+id+"+]";
+            $(".product-colors span").click(function() {
+                $(".product-colors span").removeClass("active-item");
+                $(this).addClass("active-item");
+                id = document.querySelector('.active-item').id;
+               
+                url = "https://wa.me/201142397025?text=Noura+Brand+Store+||+Product+id+[+"+id+"+]";
+            });
+
+          </script>
           <script>
             // Change The Picture and Associated Element Color when Color Options Are Clicked.
             $(".product-colors span").click(function() {
-                $(".product-colors span").removeClass("active");
-                $(this).addClass("active");
-                $(".active").css("border-color", $(this).attr("data-color-sec"))
+                $(".product-colors span").removeClass("active-item");
+                $(this).addClass("active-item");
+                $(".active-item").css("border-color", $(this).attr("data-color-sec"))
                 $(".container-colored .details button").css("background", $(this).attr("data-color-sec"));
                 $(".imgBx img").attr('src', $(this).attr("data-pic"));
             });

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
   <head>
@@ -144,19 +143,19 @@
             <div class="details">
                 <div class="content">
                     <p class="product-colors" style="font-weight: 500;">الألوان المتاحة :&ensp;&ensp; <br> 
-                        <span class="dp6-1 active" data-color-primary="#E01492" data-color-sec="#E01492" data-pic="../../images/dress/summer-img/P6/1st.png"></span>  
-                        <span class="dp6-2" data-color-primary="#010082" data-color-sec="#010082" data-pic="../../images/dress/summer-img/P6/2nd.png"></span>
-                        <span class="dp6-3" data-color-primary="#98A399" data-color-sec="#98A399" data-pic="../../images/dress/summer-img/P6/3th.png"></span>
-                        <span class="dp6-4" data-color-primary="#90ADCE" data-color-sec="#90ADCE" data-pic="../../images/dress/summer-img/P6/4th.png"></span>
-                        <span class="dp6-5" data-color-primary="#B3B3B1" data-color-sec="#B3B3B1" data-pic="../../images/dress/summer-img/P6/5th.png"></span>
-                        <span class="dp6-6" data-color-primary="#D9CFDB" data-color-sec="#D9CFDB" data-pic="../../images/dress/summer-img/P6/6th.png"></span>
-                        <span class="dp6-7" data-color-primary="#171313" data-color-sec="#171313" data-pic="../../images/dress/summer-img/P6/7th.png"></span>
-                        <span class="dp6-8" data-color-primary="#50071F" data-color-sec="#50071F" data-pic="../../images/dress/summer-img/P6/8th.png"></span>
-                        <span class="dp6-9" data-color-primary="#76375E" data-color-sec="#76375E" data-pic="../../images/dress/summer-img/P6/9th.png"></span>
-                        <span class="dp6-10" data-color-primary="#0F1410" data-color-sec="#0F1410" data-pic="../../images/dress/summer-img/P6/10th.png"></span>
-                        <span class="dp6-11" data-color-primary="#657E98" data-color-sec="#657E98" data-pic="../../images/dress/summer-img/P6/11th.png"></span>
+                        <span id="Summer dress p6 item - (1)" class="dp6-1 active-item" data-color-primary="#E01492" data-color-sec="#E01492" data-pic="../../images/dress/summer-img/P6/1st.png"></span>  
+                        <span id="Summer dress p6 item - (2)" class="dp6-2" data-color-primary="#010082" data-color-sec="#010082" data-pic="../../images/dress/summer-img/P6/2nd.png"></span>
+                        <span id="Summer dress p6 item - (3)" class="dp6-3" data-color-primary="#98A399" data-color-sec="#98A399" data-pic="../../images/dress/summer-img/P6/3th.png"></span>
+                        <span id="Summer dress p6 item - (4)" class="dp6-4" data-color-primary="#90ADCE" data-color-sec="#90ADCE" data-pic="../../images/dress/summer-img/P6/4th.png"></span>
+                        <span id="Summer dress p6 item - (5)" class="dp6-5" data-color-primary="#B3B3B1" data-color-sec="#B3B3B1" data-pic="../../images/dress/summer-img/P6/5th.png"></span>
+                        <span id="Summer dress p6 item - (6)" class="dp6-6" data-color-primary="#D9CFDB" data-color-sec="#D9CFDB" data-pic="../../images/dress/summer-img/P6/6th.png"></span>
+                        <span id="Summer dress p6 item - (7)" class="dp6-7" data-color-primary="#171313" data-color-sec="#171313" data-pic="../../images/dress/summer-img/P6/7th.png"></span>
+                        <span id="Summer dress p6 item - (8)" class="dp6-8" data-color-primary="#50071F" data-color-sec="#50071F" data-pic="../../images/dress/summer-img/P6/8th.png"></span>
+                        <span id="Summer dress p6 item - (9)" class="dp6-9" data-color-primary="#76375E" data-color-sec="#76375E" data-pic="../../images/dress/summer-img/P6/9th.png"></span>
+                        <span id="Summer dress p6 item - (10)" class="dp6-10" data-color-primary="#0F1410" data-color-sec="#0F1410" data-pic="../../images/dress/summer-img/P6/10th.png"></span>
+                        <span id="Summer dress p6 item - (11)" class="dp6-11" data-color-primary="#657E98" data-color-sec="#657E98" data-pic="../../images/dress/summer-img/P6/11th.png"></span>
                      </p>
-                    <button style="background-color: #E01492">اطلب الان</button>
+                    <button onclick="location.href=url" style="background-color: #E01492">اطلب الان</button>
                 </div>
             </div>
         </div>
@@ -279,15 +278,28 @@
       </div>
 
     <div>
+          <script type="text/javascript">
+
+            var id = document.querySelector('.active-item').id;
+            var url = "https://wa.me/201142397025?text=Noura+Brand+Store+||+Product+id+[+"+id+"+]";
+            $(".product-colors span").click(function() {
+                $(".product-colors span").removeClass("active-item");
+                $(this).addClass("active-item");
+                id = document.querySelector('.active-item').id;
+              
+                url = "https://wa.me/201142397025?text=Noura+Brand+Store+||+Product+id+[+"+id+"+]";
+            });
+
+          </script>
           <script>
-                // Change The Picture and Associated Element Color when Color Options Are Clicked.
-                $(".product-colors span").click(function() {
-                    $(".product-colors span").removeClass("active");
-                    $(this).addClass("active");
-                    $(".active").css("border-color", $(this).attr("data-color-sec"))
-                    $(".container-colored .details button").css("background", $(this).attr("data-color-sec"));
-                    $(".imgBx img").attr('src', $(this).attr("data-pic"));
-                });
+            // Change The Picture and Associated Element Color when Color Options Are Clicked.
+            $(".product-colors span").click(function() {
+                $(".product-colors span").removeClass("active-item");
+                $(this).addClass("active-item");
+                $(".active-item").css("border-color", $(this).attr("data-color-sec"))
+                $(".container-colored .details button").css("background", $(this).attr("data-color-sec"));
+                $(".imgBx img").attr('src', $(this).attr("data-pic"));
+            });
           </script>
           <script src="../../js/jquery.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

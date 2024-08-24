@@ -143,10 +143,10 @@
             <div class="details">
                 <div class="content">
                     <p class="product-colors" style="font-weight: 500;">الألوان المتاحة :&ensp;&ensp; <br>   
-                        <span class="fanta-black active" data-color-primary="#170102" data-color-sec="#170102" data-pic="../images/dress/winter-img/1st.png"></span>
-                        <span class="dark-red" data-color-primary="#45313D" data-color-sec="#45313D" data-pic="../images/dress/winter-img/2nd.png"></span>
+                        <span class="fanta-black active-item" id="Winter dress item - (1)" data-color-primary="#170102" data-color-sec="#170102" data-pic="../images/dress/winter-img/1st.png"></span>
+                        <span class="dark-red" id="Winter dress item - (2)" data-color-primary="#45313D" data-color-sec="#45313D" data-pic="../images/dress/winter-img/2nd.png"></span>
                     </p>
-                    <button style="background-color: #170102">اطلب الان</button>
+                    <button onclick="location.href=url" style="background-color: #170102">اطلب الان</button>
                 </div>
             </div>
         </div>
@@ -269,16 +269,30 @@
       </div>
 
     <div>
-          <script>
-            // Change The Picture and Associated Element Color when Color Options Are Clicked.
-            $(".product-colors span").click(function() {
-                $(".product-colors span").removeClass("active");
-                $(this).addClass("active");
-                $(".active").css("border-color", $(this).attr("data-color-sec"))
-                $(".container-colored .details button").css("background", $(this).attr("data-color-sec"));
-                $(".imgBx img").attr('src', $(this).attr("data-pic"));
-            });
-          </script>
+      <script type="text/javascript">
+
+        var id = document.querySelector('.active-item').id;
+        var url = "https://wa.me/201142397025?text=Noura+Brand+Store+||+Product+id+[+"+id+"+]";
+        $(".product-colors span").click(function() {
+            $(".product-colors span").removeClass("active-item");
+            $(this).addClass("active-item");
+            id = document.querySelector('.active-item').id;
+           
+            url = "https://wa.me/201142397025?text=Noura+Brand+Store+||+Product+id+[+"+id+"+]";
+        });
+
+      </script>
+      <script>
+        // Change The Picture and Associated Element Color when Color Options Are Clicked.
+        $(".product-colors span").click(function() {
+            $(".product-colors span").removeClass("active-item");
+            $(this).addClass("active-item");
+            $(".active-item").css("border-color", $(this).attr("data-color-sec"))
+            $(".container-colored .details button").css("background", $(this).attr("data-color-sec"));
+            $(".imgBx img").attr('src', $(this).attr("data-pic"));
+        });
+      </script>
+
           <script src="js/jquery.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
   <head>
@@ -144,15 +143,15 @@
             <div class="details">
                 <div class="content">
                     <p class="product-colors" style="font-weight: 500;">الألوان المتاحة :&ensp;&ensp; <br>   
-                        <span class="dp2-1 active" data-color-primary="#9E392F" data-color-sec="#9E392F" data-pic="../../images/dress/summer-img/P2/1st.png"></span>
-                        <span class="dp2-2" data-color-primary="#BD8CA1" data-color-sec="#BD8CA1" data-pic="../../images/dress/summer-img/P2/2nd.png"></span>
-                        <span class="dp2-3" data-color-primary="#A88176" data-color-sec="#A88176" data-pic="../../images/dress/summer-img/P2/3th.png"></span>
-                        <span class="dp2-4" data-color-primary="#0B090C" data-color-sec="#0B090C" data-pic="../../images/dress/summer-img/P2/4th.png"></span>
-                        <span class="dp2-5" data-color-primary="#662443" data-color-sec="#662443" data-pic="../../images/dress/summer-img/P2/5th.png"></span>
-                        <span class="dp2-6" data-color-primary="#02284C" data-color-sec="#02284C" data-pic="../../images/dress/summer-img/P2/6th.png"></span>
-                        <span class="dp2-7" data-color-primary="#C48392" data-color-sec="#C48392" data-pic="../../images/dress/summer-img/P2/7th.png"></span>
+                        <span id="Summer dress p2 item - (1)" class="dp2-1 active-item" data-color-primary="#9E392F" data-color-sec="#9E392F" data-pic="../../images/dress/summer-img/P2/1st.png"></span>
+                        <span id="Summer dress p2 item - (2)" class="dp2-2" data-color-primary="#BD8CA1" data-color-sec="#BD8CA1" data-pic="../../images/dress/summer-img/P2/2nd.png"></span>
+                        <span id="Summer dress p2 item - (3)" class="dp2-3" data-color-primary="#A88176" data-color-sec="#A88176" data-pic="../../images/dress/summer-img/P2/3th.png"></span>
+                        <span id="Summer dress p2 item - (4)" class="dp2-4" data-color-primary="#0B090C" data-color-sec="#0B090C" data-pic="../../images/dress/summer-img/P2/4th.png"></span>
+                        <span id="Summer dress p2 item - (5)" class="dp2-5" data-color-primary="#662443" data-color-sec="#662443" data-pic="../../images/dress/summer-img/P2/5th.png"></span>
+                        <span id="Summer dress p2 item - (6)" class="dp2-6" data-color-primary="#02284C" data-color-sec="#02284C" data-pic="../../images/dress/summer-img/P2/6th.png"></span>
+                        <span id="Summer dress p2 item - (7)" class="dp2-7" data-color-primary="#C48392" data-color-sec="#C48392" data-pic="../../images/dress/summer-img/P2/7th.png"></span>
                     </p>
-                    <button style="background-color: #9E392F">اطلب الان</button>
+                    <button onclick="location.href=url" style="background-color: #9E392F">اطلب الان</button>
                 </div>
             </div>
         </div>
@@ -275,15 +274,28 @@
       </div>
 
     <div>
+          <script type="text/javascript">
+
+            var id = document.querySelector('.active-item').id;
+            var url = "https://wa.me/201142397025?text=Noura+Brand+Store+||+Product+id+[+"+id+"+]";
+            $(".product-colors span").click(function() {
+                $(".product-colors span").removeClass("active-item");
+                $(this).addClass("active-item");
+                id = document.querySelector('.active-item').id;
+              
+                url = "https://wa.me/201142397025?text=Noura+Brand+Store+||+Product+id+[+"+id+"+]";
+            });
+
+          </script>
           <script>
-                // Change The Picture and Associated Element Color when Color Options Are Clicked.
-                $(".product-colors span").click(function() {
-                    $(".product-colors span").removeClass("active");
-                    $(this).addClass("active");
-                    $(".active").css("border-color", $(this).attr("data-color-sec"))
-                    $(".container-colored .details button").css("background", $(this).attr("data-color-sec"));
-                    $(".imgBx img").attr('src', $(this).attr("data-pic"));
-                });
+            // Change The Picture and Associated Element Color when Color Options Are Clicked.
+            $(".product-colors span").click(function() {
+                $(".product-colors span").removeClass("active-item");
+                $(this).addClass("active-item");
+                $(".active-item").css("border-color", $(this).attr("data-color-sec"))
+                $(".container-colored .details button").css("background", $(this).attr("data-color-sec"));
+                $(".imgBx img").attr('src', $(this).attr("data-pic"));
+            });
           </script>
           <script src="../../js/jquery.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
