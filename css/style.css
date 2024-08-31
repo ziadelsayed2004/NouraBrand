@@ -136,6 +136,11 @@ hr{
   margin-bottom: 9.5em;
 }
 
+@media (max-width: 767px){
+  .custumer-reveiws{
+    margin-top: -10vh;
+  }
+}
 
 /* Section Title */
 h1, h2, h3, h4, h5, h6 {
