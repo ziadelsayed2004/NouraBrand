@@ -43,7 +43,21 @@
   .darkBlue{
     background-color: #213247;
   }
-
+  .dp1-14{
+    background: #BABA18;
+  }
+  .dp1-15{
+    background: #1A3069;
+  }
+  .dp1-16{
+    background: #546C52;
+  }
+  .dp1-17{
+    background: #4A3E3E;
+  }
+  .dp1-18{
+    background: #865C4E;
+  }
 
 /* Summer P2*/
 
@@ -89,6 +103,9 @@
   }
   .dp4-4{
     background: #D8A2B9;
+}
+  .dp4-5{
+    background: #253b51;
 }
 
 
